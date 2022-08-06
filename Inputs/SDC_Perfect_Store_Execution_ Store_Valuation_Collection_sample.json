@@ -1,0 +1,23 @@
+{
+	"connection_key": "response",
+	"result": true,
+	"redis_key": "abcdefg",
+	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+	"StoreValuationCollection": {
+		"ObjectID": "00163E7930561EE996B9D4BEF50C0D85",
+		"ETag": "",
+		"TotalScoreValue": "",
+		"ReferenceVisitUUID": "",
+		"StoreLayoutName": "",
+		"ValidFromDate": "",
+		"ValidToDate": "",
+		"ReferenceVisitID": "",
+		"StoreLayoutID": "",
+		"StoreLayoutVersion": "",
+		"EntityLastChangedOn": ""
+	},
+	"api_schema": "PerfectStoreExecution",
+	"accepter": ["StoreValuationCollection"],
+	"store_valuation_code": "00163E7930561EE996B9D4BEF50C0D85",
+	"deleted": false
+}

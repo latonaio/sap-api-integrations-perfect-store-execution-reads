@@ -1,0 +1,21 @@
+{
+	"cursor": "/Users/latona5/bitbucket/sap-api-integrations-perfect-store-execution-reads/SAP_API_Caller/caller.go#L53",
+	"function": "sap-api-integrations-perfect-store-execution-reads/SAP_API_Caller.(*SAPAPICaller).StoreValuationCollection",
+	"level": "INFO",
+	"message": [
+		{
+			"ObjectID": "00163E7930561EE996B9D4BEF50C0D85",
+			"ETag": "2020-04-08T01:58:54+09:00",
+			"TotalScoreValue": "50.00",
+			"ReferenceVisitUUID": "00163E79-3056-1EE9-96B9-D24D2F71ED65",
+			"StoreLayoutName": "Store Engagement Map.",
+			"ValidFromDate": "",
+			"ValidToDate": "9999-12-31T09:00:00+09:00",
+			"ReferenceVisitID": "3466",
+			"StoreLayoutID": "17",
+			"StoreLayoutVersion": "1",
+			"EntityLastChangedOn": "2019-04-09T16:02:39+09:00"
+		}
+	],
+	"time": "2022-08-06T11:49:43+09:00"
+}
