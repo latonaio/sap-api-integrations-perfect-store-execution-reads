@@ -1,5 +1,5 @@
 # sap-api-integrations-perfect-store-execution-reads
-sap-api-integrations-perfect-store-execution-reads は、外部システム(特にエッジコンピューティング環境)をSAPと統合することを目的に、SAP API キャンペーンデータを取得するマイクロサービスです。  
+sap-api-integrations-perfect-store-execution-reads は、外部システム(特にエッジコンピューティング環境)をSAPと統合することを目的に、SAP API 店舗評価データを取得するマイクロサービスです。  
 sap-api-integrations-perfect-store-execution-reads には、サンプルのAPI Json フォーマットが含まれています。
 sap-api-integrations-perfect-store-execution-reads は、オンプレミス版である（＝クラウド版ではない）SAPC4HANA API の利用を前提としています。クラウド版APIを利用する場合は、ご注意ください。  
 https://api.sap.com/api/perfectstoreexecution/overview 
@@ -24,15 +24,14 @@ sap-api-integrations-perfect-store-execution-reads が対応する APIサービ�
 ## 本レポジトリ に 含まれる API名
 sap-api-integrations-perfect-store-execution-reads には、次の API をコールするためのリソースが含まれています。  
 
-* StoreValuationCollection（ストアバリュエーションコレクション）
+* StoreValuationCollection（店舗評価データ）
 
 ## API への 値入力条件 の 初期値
 sap-api-integrations-perfect-store-execution-reads において、API への値入力条件の初期値は、入力ファイルレイアウトの種別毎に、次の通りとなっています。  
 
 ### SDC レイアウト
 
-* inoutSDC.StoreValuationCollection.PerfectStoreExecutionID（パーフェクトストアエグゼキューションID）
-* inoutSDC.StoreValuationCollection.PerfectStoreExecutionName（パーフェクトストアエグゼキューション名）
+* inoutSDC.StoreValuationCollection.ObjectID（オブジェクトID）
 
 
 ## SAP API Bussiness Hub の API の選択的コール
@@ -46,9 +45,9 @@ accepter において 下記の例のように、データの種別（＝APIの�
 ここでは、"StoreValuationCollection" が指定されています。    
   
 ```
-	"api_schema": "PerfectStoreExecutionStoreValuationCollection",
+	"api_schema": "PerfectStoreExecution",
 	"accepter": ["StoreValuationCollection"],
-	"campaign_code": "1",
+	"store_valuation_code": "00163E7930561EE996B9D4BEF50C0D85",
 	"deleted": false
 ```
   
@@ -57,9 +56,9 @@ accepter において 下記の例のように、データの種別（＝APIの�
 全データを取得する場合、sample.json は以下のように記載します。  
 
 ```
-	"api_schema": "PerfectStoreExecutionStoreValuationCollection",
+	"api_schema": "PerfectStoreExecution",
 	"accepter": ["All"],
-	"perfectstoreexecution_code": "1",
+	"store_valuation_code": "00163E7930561EE996B9D4BEF50C0D85",
 	"deleted": false
 ```
 
@@ -95,7 +94,7 @@ func (c *SAPAPICaller) AsyncGetPerfectStoreExecution(perfectstoreexecutionID, pe
 
 ## Output  
 本マイクロサービスでは、[golang-logging-library-for-sap](https://github.com/latonaio/golang-logging-library-for-sap) により、以下のようなデータがJSON形式で出力されます。  
-以下の sample.json の例は、SAP キャンペーン  の キャンペーンデータ が取得された結果の JSON の例です。  
+以下の sample.json の例は、SAP 完璧な店舗運営  の 店舗評価データ が取得された結果の JSON の例です。  
 以下の項目のうち、"ObjectID" ～ "EntityLastChangedOn" は、/SAP_API_Output_Formatter/type.go 内 の Type storevaluationcollection {} による出力結果です。"cursor" ～ "time"は、golang-logging-library-for-sap による 定型フォーマットの出力結果です。  
 
 ```
